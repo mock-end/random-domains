@@ -1,22 +1,28 @@
 'use strict';
 
-var isArrayLike = require('is-array-like');
+var clamp       = require('clamp');
+var toLength    = require('to-length');
 var randomTld   = require('random-tld');
+var randomLorem = require('random-lorem');
 
 
 module.exports = function (level) {
 
   if (typeof level === 'undefined') {
     level = 1;
-  } else if (typeof level !== 'number') {
-    level = parseInt(level, 10);
-
-    if (isNaN(level) || !isFinite(level)) {
-      level = 1;
-    }
+  } else {
+    level = toLength(level);
   }
 
-  var tld = randomTld();
+  level = clamp(level, 1, 10);
 
+  var parts = [];
 
+  while (level--) {
+    parts.push(randomLorem());
+  }
+
+  parts.push(randomTld());
+
+  return parts.join('.');
 };

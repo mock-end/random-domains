@@ -47,6 +47,9 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "random-tld": "file:///Users/Johnny/Documents/github.bubkoo/random-tld"
+    "clamp": "^1.0.1",
+    "random-lorem": "^1.0.0",
+    "random-tld": "^1.0.0",
+    "to-length": "^1.0.1"
   }
 }
