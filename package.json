@@ -33,12 +33,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bubkoo/random-domains.git"
+    "url": "git+https://github.com/mock-end/random-domains.git"
   },
   "bugs": {
-    "url": "https://github.com/bubkoo/random-domains/issues"
+    "url": "https://github.com/mock-end/random-domains/issues"
   },
-  "homepage": "https://github.com/bubkoo/random-domains#readme",
+  "homepage": "https://github.com/mock-end/random-domains#readme",
   "devDependencies": {
     "jshint": "^2.9.1",
     "chai": "^3.5.0",
