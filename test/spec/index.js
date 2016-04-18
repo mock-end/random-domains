@@ -8,7 +8,6 @@ describe('random-domains: ', function () {
   var randomDomains = require('../../');
 
   it('randomDomains()', function () {
-
     var ret = randomDomains();
 
     expect(ret).to.be.a('string');
@@ -17,7 +16,18 @@ describe('random-domains: ', function () {
 
 
   it('randomDomains(2)', function () {
-    var ret = randomDomains(2);
-    expect(ret.split('.').length).to.equal(3);
+    expect(randomDomains(2).split('.').length).to.equal(3);
+  });
+
+  it('randomDomains("com")', function () {
+    expect(randomDomains('com')).to.be.match(/\.com$/);
+  });
+
+  it('randomDomains(2, "com")', function () {
+    expect(randomDomains(2, 'com')).to.be.match(/\.com$/);
+  });
+
+  it('randomDomains(2, "")', function () {
+    expect(randomDomains(2, '').split('.').length).to.equal(3);
   });
 });

@@ -24,7 +24,7 @@ $ npm install --save random-domains
 ```js
 var randomDomains = require('random-domains');
 
-// randomDomains(level);
+// randomDomains(level, tld);
 // `level` should between `1` and `10`
 
 randomLorem();
@@ -36,6 +36,12 @@ randomLorem(2);
 randomLorem(3);
 // => edfyiu.asfc.ajsd.me
 
+randomLorem('com');
+// => asdl.com
+
+
+randomLorem(2, 'com');
+// => asdl.sssle.com
 ```
 
 ## Related

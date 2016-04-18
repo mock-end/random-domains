@@ -1,6 +1,6 @@
 {
   "name": "random-domains",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate a random domain name.",
   "main": "index.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "clamp": "^1.0.1",
     "random-lorem": "^1.0.0",
     "random-tld": "^1.0.0",
-    "to-length": "^1.0.1"
+    "to-length": "^1.0.1",
+    "to-str": "^1.0.0"
   }
 }

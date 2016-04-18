@@ -1,17 +1,29 @@
 'use strict';
 
 var clamp       = require('clamp');
+var toString    = require('to-str');
 var toLength    = require('to-length');
 var randomTld   = require('random-tld');
 var randomLorem = require('random-lorem');
 
 
-module.exports = function (level) {
+module.exports = function (level, tld) {
 
-  if (typeof level === 'undefined') {
+  var length = arguments.length;
+
+  if (length === 0) {
     level = 1;
+    tld   = randomTld();
+  } else if (length === 1) {
+    if (typeof level === 'number') {
+      tld = randomTld();
+    } else {
+      tld   = toString(level);
+      level = 1;
+    }
   } else {
     level = toLength(level);
+    tld   = toString(tld) || randomTld();
   }
 
   level = clamp(level, 1, 10);
@@ -22,7 +34,7 @@ module.exports = function (level) {
     parts.push(randomLorem());
   }
 
-  parts.push(randomTld());
+  parts.push(tld);
 
   return parts.join('.');
 };
