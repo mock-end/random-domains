@@ -45,8 +45,8 @@
   },
   "dependencies": {
     "clamp": "^1.0.1",
-    "random-lorem": "^1.0.0",
-    "random-tld": "^1.0.0",
+    "random-lorem": "^1.0.2",
+    "random-tld": "^1.0.1",
     "to-length": "^1.0.1",
     "to-str": "^1.0.0"
   }
