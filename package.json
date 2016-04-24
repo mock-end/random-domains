@@ -1,7 +1,7 @@
 {
   "name": "random-domains",
-  "version": "1.0.1",
-  "description": "Generate a random domain name.",
+  "version": "1.0.2",
+  "description": "Return a random domain.",
   "main": "index.js",
   "scripts": {
     "lint": "jshint index.js",
@@ -12,19 +12,16 @@
     "prepublish": "npm test"
   },
   "keywords": [
-    "domaon",
+    "domain",
     "tld",
-    "randomly",
+    "web",
     "random",
-    "rand",
-    "sampling",
-    "generator",
-    "generate",
-    "gen",
-    "network",
-    "email",
-    "url",
-    "uri"
+    "randomly",
+    "randomize",
+    "chance",
+    "test",
+    "dice",
+    "mock"
   ],
   "license": "MIT",
   "author": {
