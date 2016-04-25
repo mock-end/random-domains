@@ -22,32 +22,41 @@ $ npm install --save random-domains
 var randomDomains = require('random-domains');
 
 // API
-// - randomDomains();
-// - randomDomains(tld);
-// - randomDomains(level);
-// - randomDomains(level, tld);
-// `level` should between `1` and `10`
+// - randomDomains([options]);
 
-
-randomDomains();
-// => ase.com
-
-
-randomDomains(2);
-// => def.jkty.net
-
-
-randomDomains(3);
-// => edfyiu.asfc.ajsd.me
-
-
-randomDomains('com');
-// => asdl.com
-
-
-randomDomains(2, 'com');
-// => asdl.sssle.com
+// options
+// - tld
+// - level
 ```
+
+Return a random domain with a random [tld](https://github.com/mock-end/random-tld).
+
+```js
+randomDomains();
+// => 'ase.com'
+```
+
+Optionally specify a tld and the domain will be random but the tld will not.
+
+```js
+randomDomains({tld: 'ie'})
+=> 'gotaujo.ie'
+```
+
+Optionally specify the `level` for the domain:
+
+```js
+randomDomains({ level:2 });
+// => 'edfyiu.asfc.me'
+```
+
+Or combine them:
+
+```js
+randomDomains({ level: 2, tld: 'com' });
+// => 'asdl.sssle.com'
+```
+
 
 ## Related
 
