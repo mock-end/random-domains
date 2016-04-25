@@ -39,7 +39,7 @@ randomDomains();
 Optionally specify a tld and the domain will be random but the tld will not.
 
 ```js
-randomDomains({tld: 'ie'})
+randomDomains({ tld: 'ie' })
 => 'gotaujo.ie'
 ```
 
